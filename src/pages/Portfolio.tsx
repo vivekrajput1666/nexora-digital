@@ -1,4 +1,5 @@
 import { ProjectCard } from '../components/portfolio/ProjectCard'
+import { Reveal } from '../components/ui/Reveal'
 import { projects } from '../data/content'
 
 export function Portfolio() {
@@ -15,9 +16,11 @@ export function Portfolio() {
         <div className="container-shell">
           <p className="mb-7 text-sm text-slate-500">Projects developed by Nexora Digital</p>
           <div className="grid items-start gap-6 lg:grid-cols-2">
-          {projects.map((project) => (
-            <ProjectCard key={project.name} project={project} />
-          ))}
+            {projects.map((project, index) => (
+              <Reveal key={project.name} delay={index * 100}>
+                <ProjectCard project={project} />
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

@@ -10,8 +10,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false)
 
   return (
-    <article className="card-border group overflow-hidden rounded-[28px] transition duration-300 hover:-translate-y-1 hover:border-violet-300/20 hover:shadow-[0_28px_90px_rgba(54,44,106,0.22)]">
-      <div className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${project.accent}`}>
+    <article className="project-card card-border group overflow-hidden rounded-[28px] transition duration-300 hover:-translate-y-1 hover:border-violet-300/20 hover:shadow-[0_28px_90px_rgba(54,44,106,0.22)]">
+      <div className={`project-preview relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${project.accent}`}>
         {!imageLoaded && (
           <div className="absolute inset-0 grid place-items-center p-6">
             <div className="flex flex-col items-center text-center">
@@ -29,16 +29,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
           decoding="async"
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageLoaded(false)}
-          className={`absolute inset-0 h-full w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.035] ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 h-full w-full object-cover object-top transition duration-700 ease-out group-hover:-translate-y-1 group-hover:scale-[1.035] ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
         />
-        <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-navy-950/75 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-200 backdrop-blur-md">
+        <span className="absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-navy-950/75 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-200 backdrop-blur-md">
           Built by Nexora Digital
         </span>
       </div>
 
       <div className="p-6 sm:p-8">
         <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-violet-300">{project.type}</p>
-        <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white sm:text-[28px]">{project.name}</h2>
+        <h2 className="project-card-title mt-3 text-2xl font-semibold tracking-[-0.03em] text-white sm:text-[28px]">{project.name}</h2>
         <p className="mt-3 text-sm leading-7 text-slate-400">{project.description}</p>
 
         <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${project.name} technologies`}>

@@ -29,7 +29,9 @@ export function Layout() {
     <div className="min-h-screen overflow-hidden bg-navy-950 text-slate-100">
       <Navbar />
       <main>
-        <Outlet />
+        <div key={location.pathname} className="page-transition">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </div>
