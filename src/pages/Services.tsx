@@ -26,7 +26,7 @@ export function Services() {
               </div>
               <div className="flex flex-col justify-between rounded-2xl border border-white/[0.07] bg-white/[0.025] p-6">
                 <div><p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">Benefit</p><p className="mt-3 text-sm leading-7 text-slate-300">{service.benefits}</p></div>
-                <Link to="/contact" className="focus-ring mt-8 inline-flex items-center gap-2 self-start rounded-full bg-violet-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-violet-600">Discuss this service <ArrowRight size={15} /></Link>
+                <Link to={`/contact?service=${encodeURIComponent(service.title)}#enquiry-form`} className="focus-ring mt-8 inline-flex items-center gap-2 self-start rounded-full bg-violet-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-violet-600">Discuss this service <ArrowRight size={15} /></Link>
               </div>
             </article>
           ))}

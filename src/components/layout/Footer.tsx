@@ -24,7 +24,7 @@ export function Footer() {
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Start a conversation</p>
           <Link to="/contact" className="mt-5 inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white">Contact us <ArrowUpRight size={15} /></Link>
-          <a href="mailto:" className="mt-3 flex items-center gap-2 text-sm text-slate-400 hover:text-white"><Mail size={15} /> Email</a>
+          <a href="mailto:nexoradigitalhub16@gmail.com" className="mt-3 flex items-center gap-2 text-sm text-slate-400 hover:text-white"><Mail size={15} /> Email</a>
         </div>
       </div>
       <div className="container-shell flex flex-col gap-3 border-t border-white/[0.06] py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">

@@ -17,8 +17,8 @@ export function About() {
             <SectionHeading eyebrow="Who we are" title="We turn business needs into focused digital experiences." />
           </div>
           <div className="space-y-5 text-base leading-8 text-slate-400">
-            <p>Nexora Digital is a web development agency creating responsive, professional websites for businesses, startups, entrepreneurs and individuals.</p>
-            <p>We work across India and with international clients, combining purposeful design, modern development and practical communication.</p>
+            <p>Nexora Digital is an independent web development studio focused on building modern websites and web applications for businesses, startups, entrepreneurs and individuals.</p>
+            <p>Our approach combines purposeful design, modern development and practical communication, with an emphasis on clear requirements and thoughtful delivery.</p>
           </div>
         </div>
       </section>

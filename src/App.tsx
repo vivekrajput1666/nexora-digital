@@ -11,8 +11,15 @@ function App() {
   const location = useLocation()
 
   useEffect(() => {
+    if (location.hash) {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)))
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })
+        return
+      }
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [location.pathname])
+  }, [location.pathname, location.hash])
 
   return (
     <Routes>

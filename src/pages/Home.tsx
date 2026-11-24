@@ -1,4 +1,4 @@
-import { ArrowRight, Code2, Gauge, Layers3, PencilRuler, Quote, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Code2, Gauge, Layers3, PencilRuler, ShieldCheck } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { SectionHeading } from '../components/ui/SectionHeading'
 import { ProjectCard } from '../components/portfolio/ProjectCard'
@@ -92,18 +92,6 @@ export function Home() {
           <div className="mt-12 grid gap-4 md:grid-cols-4">
             {[['01', 'Discover', 'We clarify goals, audience and project scope.'], ['02', 'Define', 'We turn requirements into a clear visual and content direction.'], ['03', 'Develop', 'We build, test and refine the experience responsively.'], ['04', 'Deliver', 'We prepare the finished website for launch and handover.']].map(([number, title, copy]) => (
               <article key={number} className="rounded-2xl border border-white/[0.07] p-6"><span className="text-xs font-bold text-violet-300">{number}</span><h3 className="mt-8 text-lg font-semibold">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-400">{copy}</p></article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space border-t border-white/[0.06]">
-        <div className="container-shell">
-          <SectionHeading eyebrow="Sample feedback" title="How client partnerships can feel." />
-          <p className="mt-3 text-sm text-slate-500">The following are clearly identified sample testimonials, not verified client reviews.</p>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[['A clear and professional experience from the first conversation.', 'Sample Client 01', 'Business Website'], ['The process made complex requirements feel structured and manageable.', 'Sample Client 02', 'Startup Website'], ['A polished result that communicated our offering with confidence.', 'Sample Client 03', 'Service Business']].map(([quote, name, role]) => (
-              <article key={name} className="card-border rounded-2xl p-6"><Quote size={22} className="text-violet-300" /><p className="mt-6 text-sm leading-7 text-slate-300">“{quote}”</p><div className="mt-8 border-t border-white/[0.07] pt-5"><p className="text-sm font-semibold">{name}</p><p className="mt-1 text-xs text-slate-500">{role}</p></div></article>
             ))}
           </div>
         </div>

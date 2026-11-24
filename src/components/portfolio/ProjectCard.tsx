@@ -52,11 +52,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/[0.07] pt-5">
           {project.liveUrl ? (
             <a href={project.liveUrl} target="_blank" rel="noreferrer" className="focus-ring inline-flex h-11 items-center gap-2 rounded-full border border-white/10 px-4 text-sm font-semibold text-white transition hover:border-violet-400/40 hover:bg-violet-400/[0.06]">
-              View Project <ArrowUpRight size={15} aria-hidden="true" />
+              View Live Project <ArrowUpRight size={15} aria-hidden="true" />
             </a>
           ) : (
             <button type="button" disabled title="A live project URL has not been configured." className="inline-flex h-11 cursor-not-allowed items-center gap-2 rounded-full border border-white/[0.08] px-4 text-sm font-semibold text-slate-500">
-              View Project <ArrowUpRight size={15} aria-hidden="true" />
+              View Live Project <ArrowUpRight size={15} aria-hidden="true" />
             </button>
           )}
           {!project.liveUrl && <span className="text-xs text-slate-500">Live project URL not configured</span>}
